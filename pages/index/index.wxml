@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取code </button>
+    <text class="userinfo-nickname">{{code}}</text>
+  </view>
+</view>
