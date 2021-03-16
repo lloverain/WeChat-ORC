@@ -1,0 +1,2 @@
+<!--pages/showPage/showPage.wxml-->
+<web-view  src="{{url}}"></web-view>
