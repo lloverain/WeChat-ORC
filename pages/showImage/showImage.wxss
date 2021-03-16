@@ -11,3 +11,13 @@ button {
   margin: 10px;
   width: 100%;
 }
+
+.link_child{
+  font-size: 24rpx;
+  line-height: 30rpx;
+  display: table;
+}
+.link_child text {
+  vertical-align:middle;
+  display: table-cell;
+}

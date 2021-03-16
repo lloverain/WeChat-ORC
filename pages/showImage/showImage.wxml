@@ -1,1 +1,1 @@
-<button wx:for="{{json}}" vx:for-item="item" data-gid='{{item}}' bindlongtap='copy' bindtap='toPage' style="width:100%;font-size:small;display: inline-block;white-space: nowrap;overflow: hidden;text-overflow:ellipsis;">{{item}}</button>
+<button wx:for="{{json}}" vx:for-item="item" data-gid='{{item}}' bindlongtap='copy' class="link_child" bindtap='toPage'>{{item}}</button>
