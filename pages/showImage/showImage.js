@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+      requestUrl:"https://sckxyy.cn1.utools.club",
       url:'https://www.arma3.vip/rain/',
       json:[],
       id:''
@@ -72,7 +73,7 @@ Page({
   getImgaes:function(){
     var that = this
       wx.request({
-      url : "https://sckxyy.cn1.utools.club/scanRecord",
+      url : that.data.requestUrl+"/scanRecord",
       method: "POST",
       data: {
         id : that.data.id

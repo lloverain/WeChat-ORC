@@ -4,6 +4,7 @@ const app = getApp()
 
 Page({
   data: {
+    requestUrl:"https://sckxyy.cn1.utools.club",
     show: true,
     code: 'test',
     json: '',
@@ -110,7 +111,7 @@ Page({
   getShop() {
     var that = this
     wx.request({
-      url: "https://sckxyy.cn1.utools.club/count",
+      url: that.data.requestUrl+"/count",
       method: "POST",
       data: {
         id: that.data.qRCodeMsg
@@ -126,7 +127,7 @@ Page({
     })
 
     wx.request({
-      url: "https://sckxyy.cn1.utools.club/showShop",
+      url: that.data.requestUrl+"/showShop",
       method: "POST",
       data: {
         data: that.data.qRCodeMsg
@@ -173,7 +174,7 @@ Page({
       },
       complete:function(){
         wx.request({
-          url: "https://sckxyy.cn1.utools.club/count",
+          url: this.data.requestUrl+"/count",
           method: "POST",
           data: {
             id: that.data.tiaoma
@@ -281,7 +282,7 @@ Page({
   upImgs: function (imgurl, index) {
     var that = this;
     wx.uploadFile({
-      url: 'https://sckxyy.cn1.utools.club/UploadImgae', //
+      url: that.data.requestUrl+'/UploadImgae', //
       filePath: imgurl,
       name: 'file',
       header: {
@@ -327,7 +328,7 @@ Page({
       ImageUrl: that.data.ImageUrl
     };
     wx.request({
-      url: 'https://sckxyy.cn1.utools.club/uploadText',
+      url: that.data.requestUrl+'/uploadText',
       data: JSON.stringify(data),
       method: 'POST',
       success: function (res) {
@@ -359,7 +360,7 @@ Page({
       complete:function(){
         console.log("123123")
         wx.request({
-          url: "https://sckxyy.cn1.utools.club/count",
+          url: this.data.requestUrl+"/count",
           method: "POST",
           data: {
             id: that.data.tiaoma

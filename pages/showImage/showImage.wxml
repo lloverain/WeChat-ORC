@@ -1,1 +1,2 @@
+<view class="title">当连接点击无法打开，请到游览器访问！</view>
 <button wx:for="{{json}}" vx:for-item="item" data-gid='{{item}}' bindlongtap='copy' class="link_child" bindtap='toPage'>{{item}}</button>

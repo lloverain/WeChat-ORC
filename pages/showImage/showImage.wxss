@@ -21,3 +21,8 @@ button {
   vertical-align:middle;
   display: table-cell;
 }
+
+.title{
+  color: red;
+  text-align: center;
+}
